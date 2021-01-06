@@ -3,10 +3,10 @@ const mysql = require('mysql');
 
 //Credenciales MySQL
 const connection = mysql.createConnection({
-    host: "masterclassiot.ga",
-    user: "admin_datos",
-    password: "121212",
-    database: "admin_datos"
+    host: process.env.HOST,
+    user: process.env.USER,
+    password: process.env.PASSWORD,
+    database: process.env.DB
 });
 
 connection.connect(function(err) {
